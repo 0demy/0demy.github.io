@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link rel="canonical" href="http://localhost:1313/br/convert/">
+  <link rel="icon" type="image/x-icon" href="https://zerodemy.com/dist/img/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="http://localhost:1313/css/bs.css">
+  <link rel="stylesheet" href="http://localhost:1313/css/style.css">
+  <title>Convert BR | Aishik IT Center</title>
+</head>
+<body>
+    <header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container py-2 py-sm-3 border-bottom">
+      
+      
+      
+      <a class="navbar-brand fw-bold" href="http://localhost:1313/" style="font-family: Arial, Helvetica, sans-serif;">
+        Aishik IT Center
+        <span class="d-block fs-6">ঐশিক আইটি সেন্টার</span>
+      </a>
+      
+      <div class="d-flex align-items-center">
+        
+        <div type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-expanded="false"
+          aria-controls="navbarToggleExternalContent">
+          <i class="bi bi-menu-up"></i>
+        </div>
+        
+        <div class="vl mx-2"></div>
+        <div class="dropdown">
+          <button class="btn btn-link nav-link" id="bd-theme" type="button" aria-expanded="true"
+            data-bs-toggle="dropdown" data-bs-display="static" aria-label="থিম পরিবর্তন (light)">
+            <i id="theme-icon-active" class="me-1 bi-sun"></i></button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+            <li><button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light"
+                aria-pressed="true">
+                <i id="theme-icon" class="me-1 bi-sun"></i> আলো</button></li>
+            <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                aria-pressed="false">
+                <i id="theme-icon" class="me-1 bi-moon"></i> আঁধার</button></li>
+          </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+ <nav class="navbar navbar-expand-lg bg-white">
+  <div class="container">
+    <div class="collapse navbar-collapse py-2" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">আইটি</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">উইন্ডোজ সেটআপ</a></li>
+            <li><a class="dropdown-item" href="#">ডাটা রিকোভারি</a></li>
+            <li><a class="dropdown-item" href="#">লিনাক্স সেটআপ</a></li>
+            <li><a class="dropdown-item" href="#">ফোন আনলক/এফআরপি বাইপাস</a></li>
+            <li><a class="dropdown-item" href="#">কম্পিউটার ট্রেনিং</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">এনআইডি/ভোটার</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/nid/new/">নতুন ভোটার আবেদন</a></li>
+            <li><a class="dropdown-item" href="/nid/transfer/">ভোটার স্থানান্তর আবেদন</a></li>
+            <li><a class="dropdown-item" href="/nid/">ভোটার স্লিপ</a></li>
+            <li><a class="dropdown-item" href="/nid/">স্থায়ী ঠিকানা সংশোধন আবেদন</a></li>
+            <li><a class="dropdown-item" href="/nid/">মৃত ভোটার সক্রিয় আবেদন</a></li>
+            <li><a class="dropdown-item" href="/nid/">ভোটার তালিকা</a></li>
+            <li><a class="dropdown-item" href="/nid/">NID ছবি ও স্বাক্ষর পরিবর্তন</a></li>
+            <li><a class="dropdown-item" href="/nid/">দ্বৈত ভোটার কর্তন</a></li>
+            <li><a class="dropdown-item" href="/nid/">AFIS ম্যাচিং আবেদন</a></li>
+            <li><a class="dropdown-item" href="/nid/">NID সংশোধন আবেদন বাতিল</a></li>
+            <li><a class="dropdown-item" href="/nid/">রিইস্যু</a></li>
+            <li><a class="dropdown-item" href="/nid/">উত্তোলন</a></li>
+            <li><a class="dropdown-item" href="/nid/">ভোটার নং</a></li>
+            <li><a class="dropdown-item" href="/nid/">ভোটার স্থানান্তর যাচাই</a></li>
+            <li><a class="dropdown-item" href="/nid/">পুরাতন NID Number সংগ্রহ</a></li>
+            <li><a class="dropdown-item" href="/nid/">স্মার্ট NID Number সংগ্রহ</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">জন্ম/মৃত্যু নিবন্ধন</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/nid/new/">নতুন জন্ম নিবন্ধন আবেদন</a></li>
+            <li><a class="dropdown-item" href="/nid/transfer/">সংশোধন</a></li>
+            <li><a class="dropdown-item" href="/nid/">বয়স সংশোধন</a></li>
+            <li><a class="dropdown-item" href="/nid/">স্থায়ী ঠিকানা সংশোধন</a></li>
+            <li><a class="dropdown-item" href="/nid/">মৃত ভোটার সক্রিয় আবেদন</a></li>
+            <li><a class="dropdown-item" href="/nid/">ভোটার তালিকা</a></li>
+            <li><a class="dropdown-item" href="/nid/">NID ছবি ও স্বাক্ষর পরিবর্তন</a></li>
+            <li><a class="dropdown-item" href="/nid/">দ্বৈত ভোটার কর্তন</a></li>
+            <li><a class="dropdown-item" href="/nid/">AFIS ম্যাচিং আবেদন</a></li>
+            <li><a class="dropdown-item" href="/nid/">NID সংশোধন আবেদন বাতিল</a></li>
+            <li><a class="dropdown-item" href="/nid/">রিইস্যু</a></li>
+            <li><a class="dropdown-item" href="/nid/">উত্তোলন</a></li>
+            <li><a class="dropdown-item" href="/nid/">ভোটার নং</a></li>
+            <li><a class="dropdown-item" href="/nid/">ভোটার স্থানান্তর যাচাই</a></li>
+            <li><a class="dropdown-item" href="/nid/">পুরাতন NID Number সংগ্রহ</a></li>
+            <li><a class="dropdown-item" href="/nid/">স্মার্ট NID Number সংগ্রহ</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">অন্যান্য</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">পাসপোর্ট</a></li>
+            <li><a class="dropdown-item" href="#">ভিসা</a></li>
+            <li><a class="dropdown-item" href="#">টিন/ট্যাক্স রিটার্ন</a></li>
+            <li><a class="dropdown-item" href="#">ড্রাইভিং লাইসেন্স</a></li>
+            <li><a class="dropdown-item" href="#">জিডি/পুলিশ ক্লিয়ারেন্স</a></li>
+            <li><a class="dropdown-item" href="#">জমির পর্চা/খতিয়ান/খাজনা/নামজারি/কর</a></li>
+            <li><a class="dropdown-item" href="#">বিএমইটি/পিডিও/ম্যানপাওয়ার</a></li>
+            <li><a class="dropdown-item" href="#">চাকরির আবেদন</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">ডাউনলোড</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">ওয়ার্ড/ডক্স</a></li>
+            <li><a class="dropdown-item" href="#">শীট/এক্সেল</a></li>
+            <li><a class="dropdown-item" href="#">এআই</a></li>
+            <li><a class="dropdown-item" href="#">ফটোশপ</a></li>
+            <li><a class="dropdown-item" href="#">ইঙ্কস্কেপ</a></li>
+          </ul>
+        </li>
+
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+  
+  <div class="collapse menu_global border-bottom" id="navbarToggleExternalContent">
+    <div class="container">
+    <div class="row py-3 py-md-5">
+        <div class="col-12 col-md-4">
+            <h4 class="mb-2">সেবা ও তথ্য</h4>
+            <ul class="list-unstyled">
+                <li><a href="#">বাংলাদেশ</a>
+                </li>
+                <li><a href="#">জন্ম, মৃত্যু, বিবাহ ও সংশ্লিষ্ট পরিসেবা</a>
+                </li>
+                <li><a href="#">পেনশন, ভাতা ও অন্যান্য</a></li>
+                <li><a href="#">ব্যবসায় ও বাণিজ্য</a>
+                </li>
+                <li><a href="#">জাতীয় পরিচয়পত্র ও নাগরিকত্ব</a>
+                </li>
+                <li><a href="#">আইন, অপরাধ ও বিচার</a>
+                </li>
+                <li><a href="/services/education">শিক্ষা ও বৃত্তি</a></li>
+                <li><a href="#">গ্রাম ও কুটির শিল্প</a></li>
+                <li><a href="#">নগর</a></li>
+                <li><a href="#">সমাজ ও সংস্কৃতি</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-4">
+            <ul class="list-unstyled">
+                <li><a href="#">শ্রম ও কর্মসংস্থান</a></li>
+                <li><a href="#">প্রবাস ও রেমিট্যান্স</a></li>
+                <li><a href="#">অর্থ ও কর</a></li>
+                <li><a href="#">গৃহায়ন ও স্থানীয় পরিসেবা</a></li>
+                <li><a href="#">পাসপোর্ট, বৈদেশিক প্রমাণ</a></li>
+                <li><a href="#">ভিসা ও ইমিগ্রেশন</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-4">
+            <h4 class="mb-2">রাষ্ট্রীয় কার্যক্রম</h4>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="/organizations/">কার্যালয়</a>
+                    <span class="d-block fs-6">দপ্তর, অধিদপ্তর, মন্ত্রণালয়, বিভাগীয় ও জেলা কার্যালয়..</span>
+                </li>
+                <li>
+                    <a href="#">সংবাদ</a>
+                    <span class="d-block fs-6">সংবাদ, বক্তৃতা, চিঠি এবং নোটিশ</span>
+                </li>
+                <li>
+                    <a href="#">গবেষণা ও পরিসংখ্যান</a>
+                    <span class="d-block fs-6">প্রতিবেদন, বিশ্লেষণ এবং অফিসিয়াল পরিসংখ্যান</span>
+                </li>
+                <li>
+                    <a href="#">আইন ও বিধি</a>
+                    <span class="d-block fs-6">বিস্তারিত নির্দেশিকা, প্রবিধান এবং নিয়ম</span>
+                </li>
+                <li>
+                    <a href="#">নীতিমালা কাগজপত্র এবং পরামর্শ</a>
+                    <span class="d-block fs-6">পরামর্শ এবং কৌশল</span>
+                </li>
+                <li>
+                    <a href="#">স্বচ্ছতা</a>
+                    <span class="d-block fs-6">তথ্য, তথ্য প্রকাশের স্বাধীনতা এবং কর্পোরেট রিপোর্ট</span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12 border-top-red">
+            <h4 class="my-2">অন্যান্য</h4>
+            <ul class="list-unstyled d-flex">
+                <li class="me-3">
+                    <a href="/organizations/">ক্যারিয়ার/নিয়োগ</a>
+                </li>
+                <li class="me-3">
+                    <a href="#">পোল</a>
+                </li>
+                <li class="me-3">
+                    <a href="#">অভিযোগ</a>
+                </li>
+                <li class="me-3">
+                    <a href="#">হেল্প লাইন</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+  </div>
+  
+</header>
+    <main class="page-wrapper" style="flex: 1 0 auto;">
+        
+<section class="bg-green-5">
+    <div class="container">
+        <div class="py-5">
+            <div class="braedcrumb">
+    <ul class="list-inline d-flex" id="breadcrumbs">
+        <li><a class="text-white" href="/"> ▶</a></li>
+        <li><a class="text-white" href="/br/">Brs ▶</a></li>
+        <li><a class="text-white" href="/br/convert/"> Convert BR</a></li>
+    </ul>
+</div>
+            <div class="mt-3">
+                <h1>Convert BR</h1>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container pt-5">
+    <p><button type="button" class="btn btn-primary" onclick="fillSVG()">Update</button><br>
+<button type="button" class="btn btn-success" onclick="window.print()">Print</button></p>
+<div style="display: flex; margin-bottom: 6rem">
+    <div class="col-md-4 mb-4 noprint">
+        <form id="pdfForm">
+            <div class="form-group">
+                <label>Union Parishad:</label>
+                <input type="text" id="upname" value="Maijbag Union Parishad" required>
+            </div>
+            <div class="form-group">
+                <label>Upazila, District:</label>
+                <input type="text" id="upzdis" value="Ishwarganj, Mymensingh" required>
+            </div>
+            <div class="form-group">
+                <label>Birth Registration Number:</label>
+                <input type="text" id="brn" required maxlength="17">
+            </div>
+            <div class="form-group">
+                <label>Security Code:</label>
+                <input type="text" id="code" required maxlength="4">
+                <button type="button" id="generateCode">Generate Code</button>
+            </div>
+            <div class="form-group">
+                <label>Date of Registration:</label>
+                <input type="text" id="dor" required placeholder="DD/MM/YYYY">
+            </div>
+            <div class="form-group">
+                <label>Date of Issuance:</label>
+                <input type="text" id="doi" placeholder="DD/MM/YYYY" required>
+            </div>
+            <div class="form-group">
+                <label>Date of Birth:</label>
+                <input type="text" id="dob" placeholder="DD/MM/YYYY" required>
+            </div>
+            <!-- <div class="form-group">
+                        <label>DOB in Word:</label>
+                        <input type="text" id="dobin" placeholder="put double space after month" required>
+                    </div> -->
+            <div class="form-group">
+                <label>Sex:</label>
+                <select type="text" id="sex" required>
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>নাম:</label>
+                <input type="text" id="naam" required>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label>পিতার নাম:</label>
+                <input type="text" id="pita" required>
+            </div>
+            <div class="form-group">
+                <label>Father's Name:</label>
+                <input type="text" id="fname" required>
+            </div>
+            <div class="form-group">
+                <label>মাতার নাম:</label>
+                <input type="text" id="mata" required>
+            </div>
+            <div class="form-group">
+                <label>Mother's Name:</label>
+                <input type="text" id="mname" required>
+            </div>
+            <div class="form-group">
+                <label>জন্মস্থান:</label>
+                <input type="text" id="pob_bn" value="ময়মনসিংহ" required>
+            </div>
+            <div class="form-group">
+                <label>Place of Birth:</label>
+                <input type="text" id="pob" value="Mymensingh" required>
+            </div>
+            <div class="form-group">
+                <label>স্থায়ী ঠিকানা:</label>
+                <input id="thikana1" placeholder="Line 1" required>
+                <input id="thikana2" placeholder="Line 2" value="মাইজবাগ, ঈশ্বরগঞ্জ" required>
+                <input id="thikana3" placeholder="Line 3" value="ময়মনসিংহ" required>
+            </div>
+            <div class="form-group">
+                <label>Permanent Addres:</label>
+                <input id="perma1" placeholder="Line 1" required>
+                <input id="perma2" placeholder="Line 2" value="Maijbag, Ishwarganj" required>
+                <input id="perma3" placeholder="Line 3" value="Mymensingh" required>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-8 mb-4">
+        <div id="svgContainer"></div>
+    </div>
+</div>
+</div>
+<script>
+    async function fillSVG() {
+        function convertDateToWords(dateStr) {
+            const basicNumbers = ["", "First", "Second", "Third", "Fourth", "Fifth", "Sixth", "Seventh", "Eighth", "Ninth", "Tenth",
+                "Eleventh", "Twelfth", "Thirteenth", "Fourteenth", "Fifteenth", "Sixteenth", "Seventeenth",
+                "Eighteenth", "Nineteenth"];
+            const number = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine",
+                "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen",
+                "Seventeen", "Eighteen", "Nineteen"];
+            const tensNumbers = ["", "", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+            const digits = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+            const monthNames = ["", "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"];
+            // Split the date into dd, mm, yyyy
+            const [dd, mm, yyyy] = dateStr.split("/").map(Number);
+            // Convert day (dd) to words
+            let dayWord;
+            if (dd < 20) {
+                dayWord = basicNumbers[dd];
+            } else {
+                dayWord = tensNumbers[Math.floor(dd / 10)] + (dd % 10 !== 0 ? " " + basicNumbers[dd % 10] : "");
+            }
+            // Convert month (mm) to words
+            const monthWord = monthNames[mm];
+            // Convert year (yyyy) to words
+            let yearWord = "";
+            if (yyyy < 2000) {
+                yearWord = "Nineteen ";
+                const lastTwoDigits = yyyy % 100;
+                if (lastTwoDigits < 20) {
+                    yearWord += basicNumbers[lastTwoDigits];
+                } else {
+                    yearWord += tensNumbers[Math.floor(lastTwoDigits / 10)] + (lastTwoDigits % 10 !== 0 ? " " + digits[lastTwoDigits % 10] : "");
+                }
+            } else if (yyyy === 2000) {
+                yearWord = "Two Thousand";
+            } else {
+                yearWord = "Two Thousand ";
+                const lastTwoDigits = yyyy % 100;
+                if (lastTwoDigits < 20) {
+                    yearWord += number[lastTwoDigits];
+                } else {
+                    yearWord += tensNumbers[Math.floor(lastTwoDigits / 10)] + (lastTwoDigits % 10 !== 0 ? " " + digits[lastTwoDigits % 10] : "");
+                }
+            }
+            // Returning the full date in words
+            return `${dayWord} of ${monthWord}  ${yearWord.trim()}`;
+        }
+        function titleCase(str) {
+            str = str.toLowerCase().split(' ');
+            for (let i = 0; i < str.length; i++) {
+                str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+            }
+            return str.join(' ');
+        }
+        // Getting the form data
+        const upname = titleCase(document.getElementById('upname').value);
+        const upzdis = titleCase(document.getElementById('upzdis').value);
+        const brn = document.getElementById('brn').value;
+        const code = document.getElementById('code').value.toUpperCase();
+        const doi = document.getElementById('doi').value;
+        const dor = document.getElementById('dor').value;
+        const dob = document.getElementById('dob').value;
+        // Conditional check for dob and converting date to words
+        let dobin = "";
+        if (/^\d{2}\/\d{2}\/\d{4}$/.test(dob)) {
+            dobin = convertDateToWords(dob);
+        }
+        const sex = document.getElementById('sex').value;
+        const naam = document.getElementById('naam').value;
+        const name = titleCase(document.getElementById('name').value);
+        document.title = name;
+        const pita = document.getElementById('pita').value;
+        const fname = titleCase(document.getElementById('fname').value);
+        const mata = document.getElementById('mata').value;
+        const mname = titleCase(document.getElementById('mname').value);
+        const pob_bn = document.getElementById('pob_bn').value;
+        const pob = document.getElementById('pob').value;
+        const thikana1 = document.getElementById('thikana1').value;
+        const thikana2 = document.getElementById('thikana2').value;
+        const thikana3 = document.getElementById('thikana3').value;
+        const perma1 = document.getElementById('perma1').value;
+        const perma2 = document.getElementById('perma2').value;
+        const perma3 = document.getElementById('perma3').value;
+        // Fetching the SVG template
+        const response = await fetch('/br/template.svg');
+        let svgText = await response.text();
+        // Replacing placeholders with form data
+        svgText = svgText.replace('${upname}', upname);
+        svgText = svgText.replace('${code}', code);
+        svgText = svgText.replace('${upzdis}', upzdis);
+        svgText = svgText.replace('${brn}', brn);
+        svgText = svgText.replace('${barcode}', brn);
+        svgText = svgText.replace('${dor}', dor);
+        svgText = svgText.replace('${doi}', doi);
+        svgText = svgText.replace('${dob}', dob);
+        svgText = svgText.replace('${dobin}', dobin); // Fill the converted date
+        svgText = svgText.replace('${sex}', sex);
+        svgText = svgText.replace('${naam}', naam);
+        svgText = svgText.replace('${name}', name);
+        svgText = svgText.replace('${pita}', pita);
+        svgText = svgText.replace('${fname}', fname);
+        svgText = svgText.replace('${mata}', mata);
+        svgText = svgText.replace('${mname}', mname);
+        svgText = svgText.replace('${pob_bn}', pob_bn);
+        svgText = svgText.replace('${pob}', pob);
+        svgText = svgText.replace('${thikana1}', thikana1);
+        svgText = svgText.replace('${thikana2}', thikana2);
+        svgText = svgText.replace('${thikana3}', thikana3);
+        svgText = svgText.replace('${perma1}', perma1);
+        svgText = svgText.replace('${perma2}', perma2);
+        svgText = svgText.replace('${perma3}', perma3);
+        // Insert the updated SVG into the container
+        const svgContainer = document.getElementById('svgContainer');
+        svgContainer.innerHTML = svgText;
+    }
+    document.getElementById('generateCode').addEventListener('click', function () {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let randomCode = '';
+        for (let i = 0; i < 4; i++) {
+            randomCode += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        document.getElementById('code').value = randomCode;
+    });
+</script>
+</div>
+
+    </main>
+    <footer class="bg-body-tertiary border-top mt-5">
+    <div>
+        <div class="container">
+    <div class="row py-3 py-md-5">
+        <div class="col-12 col-md-4">
+            <h4 class="mb-2">সেবা ও তথ্য</h4>
+            <ul class="list-unstyled">
+                <li><a href="#">বাংলাদেশ</a>
+                </li>
+                <li><a href="#">জন্ম, মৃত্যু, বিবাহ ও সংশ্লিষ্ট পরিসেবা</a>
+                </li>
+                <li><a href="#">পেনশন, ভাতা ও অন্যান্য</a></li>
+                <li><a href="#">ব্যবসায় ও বাণিজ্য</a>
+                </li>
+                <li><a href="#">জাতীয় পরিচয়পত্র ও নাগরিকত্ব</a>
+                </li>
+                <li><a href="#">আইন, অপরাধ ও বিচার</a>
+                </li>
+                <li><a href="/services/education">শিক্ষা ও বৃত্তি</a></li>
+                <li><a href="#">গ্রাম ও কুটির শিল্প</a></li>
+                <li><a href="#">নগর</a></li>
+                <li><a href="#">সমাজ ও সংস্কৃতি</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-4">
+            <ul class="list-unstyled">
+                <li><a href="#">শ্রম ও কর্মসংস্থান</a></li>
+                <li><a href="#">প্রবাস ও রেমিট্যান্স</a></li>
+                <li><a href="#">অর্থ ও কর</a></li>
+                <li><a href="#">গৃহায়ন ও স্থানীয় পরিসেবা</a></li>
+                <li><a href="#">পাসপোর্ট, বৈদেশিক প্রমাণ</a></li>
+                <li><a href="#">ভিসা ও ইমিগ্রেশন</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-4">
+            <h4 class="mb-2">রাষ্ট্রীয় কার্যক্রম</h4>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="/organizations/">কার্যালয়</a>
+                    <span class="d-block fs-6">দপ্তর, অধিদপ্তর, মন্ত্রণালয়, বিভাগীয় ও জেলা কার্যালয়..</span>
+                </li>
+                <li>
+                    <a href="#">সংবাদ</a>
+                    <span class="d-block fs-6">সংবাদ, বক্তৃতা, চিঠি এবং নোটিশ</span>
+                </li>
+                <li>
+                    <a href="#">গবেষণা ও পরিসংখ্যান</a>
+                    <span class="d-block fs-6">প্রতিবেদন, বিশ্লেষণ এবং অফিসিয়াল পরিসংখ্যান</span>
+                </li>
+                <li>
+                    <a href="#">আইন ও বিধি</a>
+                    <span class="d-block fs-6">বিস্তারিত নির্দেশিকা, প্রবিধান এবং নিয়ম</span>
+                </li>
+                <li>
+                    <a href="#">নীতিমালা কাগজপত্র এবং পরামর্শ</a>
+                    <span class="d-block fs-6">পরামর্শ এবং কৌশল</span>
+                </li>
+                <li>
+                    <a href="#">স্বচ্ছতা</a>
+                    <span class="d-block fs-6">তথ্য, তথ্য প্রকাশের স্বাধীনতা এবং কর্পোরেট রিপোর্ট</span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-12 border-top-red">
+            <h4 class="my-2">অন্যান্য</h4>
+            <ul class="list-unstyled d-flex">
+                <li class="me-3">
+                    <a href="/organizations/">ক্যারিয়ার/নিয়োগ</a>
+                </li>
+                <li class="me-3">
+                    <a href="#">পোল</a>
+                </li>
+                <li class="me-3">
+                    <a href="#">অভিযোগ</a>
+                </li>
+                <li class="me-3">
+                    <a href="#">হেল্প লাইন</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>
