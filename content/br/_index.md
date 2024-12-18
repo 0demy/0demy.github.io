@@ -1,6 +1,5 @@
 --- 
-title: জাতীয় পরিচয় পত্র
-sub: জাতীয় পরিচয় পত্র সেবা
+title: জন্ম ও মৃত্যু নিবন্ধন
 ---
 --
 <section class="homepage_links">
