@@ -1,60 +1,93 @@
 <header>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container py-2 py-sm-3 border-bottom">
-      {{/* Site Logo */}}
-      {{ $homepage_url := absLangURL "" }}
-      {{ if .Site.Params.logo }}
-      <a class="navbar-brand" href="{{$homepage_url}}" aria-label="{{.Site.Title}}">
-        <img class="navbar-brand-logo" src="#" alt="#">
-      </a>
-      {{ else }}
-      <a class="navbar-brand fw-bold" href="{{$homepage_url}}" style="font-family: Arial, Helvetica, sans-serif;">
-        {{ .Site.Title }}
-        {{ with .Params.sub }}<span class="d-block fs-6">{{ . }}</span>{{else}}<span class="d-block fs-6">ঐশিক আইটি সেন্টার</span>{{ end }}
-      </a>
-      {{ end }}
-      <div class="d-flex align-items-center">
-        {{/*  <a type="button" href="/user/">ঐশিক রেহমান</a>  <div class="vl mx-2"></div>*/}}
-        <div type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-expanded="false"
-          aria-controls="navbarToggleExternalContent">
-          <i class="bi bi-menu-up"></i>
+    <nav class="navbar navbar-expand-lg border-bottom">
+        <div class="container py-1 py-sm-2">
+            {{/* Site Logo/Title */}}
+            {{ $homepage_url := absLangURL "" }}
+            {{- if .Site.Params.logo -}}
+            <a class="navbar-brand" href="{{ $homepage_url }}" aria-label="{{ .Site.Title }}">
+                <img class="navbar-brand-logo" src="#" alt="#">
+            </a>
+            {{- else -}}
+            <a class="navbar-brand me-4" href='{{ $homepage_url }}'>
+                {{ if .Site.Params.siteWideDynamicTitle }}
+                {{ partial "local/site.title.html" . }}
+                <span class="d-block fs-6">{{ .Site.Title }}</span>
+                {{ else}}
+                <h5 class="mb-0 fw-bold">{{ .Site.Title }}</h5>
+                <span class="d-block fs-6">{{ .Site.Params.subtitle }}</span>
+                {{ end }}
+            </a>
+            {{- end -}}
+            <div class="d-flex row-center" id="accessibilityMenu">
+                {{/* Global Menu Toogle Button */}}
+                {{- with .Site.Params.activateGlobalMenu -}}
+                <div class="border-right" id="globalMenu">
+                    <button type="button" class="btn nav-link pe-2" data-bs-toggle="collapse"
+                        data-bs-target="#GlobalMenu" aria-expanded="false" aria-controls="GlobalMenu">
+                        <i class="bi bi-menu-up me-1"></i>
+                        {{/* <span class="d-none d-lg-inline-block fw-bold">{{i18n "termMenu"}}</span> */}}
+                    </button>
+                </div>
+                {{- end -}}
+                {{/* Languages -- Only for Multiligual Site*/}}
+                {{- with .Site.IsMultiLingual -}}
+                <div class="dropdown border-right" id="langSwitcher">
+                    <button type="button" class="btn nav-link px-2" data-bs-toggle="dropdown" aria-expanded="false"
+                        data-bs-display="static">
+                        <i class="bi-translate me-1"></i>
+                        {{/* <span class="desktop-only-inline">{{.Language.LanguageName }}</span> */}}
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        {{ $sitelang := .Site.Language.Lang }}
+                        {{ range .Site.Languages }}
+                        <li>
+                            <a class="dropdown-item{{ if eq .Lang $sitelang }} active{{ end }}" href="/{{ .Lang }}/">{{
+                                .LanguageName}}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                {{- end -}}
+
+                {{/* Theme (Dark/Light) Switcher */}}
+                {{- with .Site.Params.activateColorModeToogler -}}
+                <div class="dropdown" id="colorModeToogler">
+                    <button type="button" class="btn nav-link px-2" id="colorModeTooglerBtn" aria-expanded="false"
+                        data-bs-toggle="dropdown" data-bs-display="static">
+                        <i id="theme-icon-active" class="bi-sun"></i>
+                        {{/* <span class="desktop-only-inline" id="colorModeTooglerBtnText">{{i18n
+                            "toogleTheme"}}</span> */}}
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li type="button" class="dropdown-item d-flex align-items-center active"
+                            data-bs-theme-value="light">
+                            <i id="theme-icon" class="me-1 bi-sun"></i>
+                            <span>{{i18n "themeLight"}}</span>
+                        </li>
+                        <li type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                            aria-pressed="false">
+                            <i id="theme-icon" class="me-1 bi-moon"></i>
+                            <span>{{i18n "themeDark"}}</span>
+                        </li>
+                    </ul>
+                </div>
+                {{- end -}}
+                {{ block "headermenu" . }}{{ end }}
+                {{/* Local Menu Navigation Toogler -- START*/}}
+                <div id="LocalNavigationToogleIcon">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#LocalNavigationMenu" aria-labelledby="LocalNavigationMenu">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                {{/* Local Menu Navigation Toogler -- END */}}
+            </div>
         </div>
-        {{/*  <div class="vl mx-2"></div>
-        <div class="dropdown">
-          <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2" data-bs-toggle="dropdown"
-            aria-expanded="false" data-bs-display="static">
-            <i class="me-1 bi-translate"></i></button>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item active" aria-current="true" href="/bn/">বাংলা</a></li>
-            <li><a class="dropdown-item" href="/en/">English</a></li>
-          </ul>
-        </div>  */}}
-        <div class="vl mx-2"></div>
-        <div class="dropdown">
-          <button class="btn btn-link nav-link" id="bd-theme" type="button" aria-expanded="true"
-            data-bs-toggle="dropdown" data-bs-display="static" aria-label="থিম পরিবর্তন (light)">
-            <i id="theme-icon-active" class="me-1 bi-sun"></i></button>
-          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-            <li><button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light"
-                aria-pressed="true">
-                <i id="theme-icon" class="me-1 bi-sun"></i> আলো</button></li>
-            <li><button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
-                aria-pressed="false">
-                <i id="theme-icon" class="me-1 bi-moon"></i> আঁধার</button></li>
-          </ul>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-          aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-    </div>
-  </nav>
-  {{/* Secondary Navbar */}}
- {{ partial "menu.local.html" . }}
-  {{/* Global Menus */}}
-  <div class="collapse menu_global border-bottom" id="navbarToggleExternalContent">
-    {{ partial "menu.global.html" . }}
-  </div>
-  
+    </nav>
+    {{ if .Site.Params.useSubNavBar }}
+    {{ partial "local/menu.html" . }}
+    {{ end }}
+    {{ if .Site.Params.activateGlobalMenu }}
+    {{ partial "global/menu.html" . }}
+    {{ end }}
 </header>

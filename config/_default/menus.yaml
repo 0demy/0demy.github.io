@@ -1,0 +1,258 @@
+main:
+# জন্ম
+  - name: "জন্ম/মৃত্যু সনদ"
+    identifier: জন্ম
+    url: "#"
+    weight: 1
+  - name: "জন্ম সনদ"
+    parent: জন্ম
+    url: "/br/"
+    weight: 11
+  - name: "মৃত্যু সনদ"
+    parent: জন্ম
+    url: "/dr/"
+    weight: 12
+  - name: "নতুন জন্ম নিবন্ধন আবেদন"
+    url: "/br/new-registration/"
+    parent: "জন্ম"
+  - name: "জন্ম সনদ সংশোধন"
+    url: "/br/correction/"
+    parent: "জন্ম"
+  - name: "জন্ম সনদ বয়স সংশোধন"
+    url: "/br/age-correction/"
+    parent: "জন্ম"
+  - name: "জন্ম সনদ বাতিল"
+    url: "/br/cancel/"
+    parent: "জন্ম"
+  - name: "FAQ"
+    url: "/br/faq"
+    parent: "জন্ম"
+# মৃত্যু
+  - name: "নতুন মৃত্যু নিবন্ধন সনদ"
+    url: "/dr/"
+    parent: "জন্ম"
+  - name: "মৃত্যু সংশোধন"
+    url: "/dr/correction/"
+    parent: "জন্ম"
+  - name: "মৃত্যু সনদ বাতিল"
+    url: "/dr/cancel"
+    parent: "জন্ম"
+  - name: "মৃত্যু সনদ পুনমুদ্রন"
+    url: "/dr/reprint/"
+    parent: "জন্ম"
+  - name: "পুনমুদ্রন"
+    url: "/dr/reprint/"
+    parent: "জন্ম"
+  - name: "নতুন ফরম্যাটে কনভার্ট"
+    url: "/dr/convert/"
+    parent: "জন্ম"
+# এনআইডি
+  - name: "এনআইডি/ভোটার"
+    url: "/nid/new-voter/"
+    identifier: এনআইডি
+    weight: 2
+  - name: "এনআইডি*"
+    url: "/nid/"
+    parent: "এনআইডি"
+  - name: "নতুন ভোটার আবেদন"
+    url: "/nid/new-voter/"
+    parent: "এনআইডি"
+  - name: "ভোটার স্থানান্তর আবেদন"
+    url: "/nid/voter-transfer/"
+    parent: "এনআইডি"
+  - name: "ভোটার স্লিপ"
+    url: "/nid/"
+    parent: "এনআইডি"
+  - name: "স্থায়ী ঠিকানা সংশোধন আবেদন"
+    url: "/nid/"
+    parent: "এনআইডি"
+  - name: "মৃত ভোটার সক্রিয় আবেদন"
+    url: "/nid/"
+    parent: "এনআইডি"
+  - name: "ভোটার তালিকা"
+    url: "/nid/"
+    parent: "এনআইডি"
+  - name: "NID ছবি ও স্বাক্ষর পরিবর্তন"
+    url: "/nid/"
+    parent: "এনআইডি"
+  - name: "দ্বৈত ভোটার কর্তন"
+    url: "/nid/"
+    parent: "এনআইডি"
+  - name: "AFIS ম্যাচিং আবেদন"
+    url: "/nid/"
+    parent: "এনআইডি"
+  - name: "NID সংশোধন আবেদন বাতিল"
+    url: "/nid/"
+    parent: "এনআইডি"
+  - name: "রিইস্যু"
+    url: "/nid/reissue/"
+    parent: "এনআইডি"
+  - name: "উত্তোলন"
+    url: "/nid/"
+    parent: "এনআইডি"
+  - name: "ভোটার নং"
+    url: "/nid/voter-no/"
+    parent: "এনআইডি"
+  - name: "ভোটার স্থানান্তর আবেদনের স্ট্যাটাস যাচাই"
+    url: "/nid/voter-transfer-status/"
+    parent: "এনআইডি"
+  - name: "পুরাতন NID Number/PIN সংগ্রহ"
+    url: "/nid/old-nid-number"
+    parent: "এনআইডি"
+  - name: "স্মার্ট NID Number সংগ্রহ"
+    url: "/nid/smart-nid-number/"
+    parent: "এনআইডি"
+  - name: "FAQ"
+    url: "/nid/faq/"
+    parent: "এনআইডি"
+# প্রবাস
+  - name: "প্রবাস/পাসপোর্ট"
+    url: "/nid/faq/"
+    identifier: প্রবাস
+    weight: 3
+  - name: "পাসপোর্ট"
+    url: "/passport/"
+    parent: "প্রবাস"
+    weight: 3
+  - name: "পাসপোর্ট সংশোধন"
+    url: "/passport/correction/"
+    parent: "প্রবাস"
+    weight: 3
+  - name: "পাসপোর্ট বয়স সংশোধন"
+    url: "#"
+    parent: "প্রবাস"
+    weight: 3
+  - name: "পাসপোর্ট রিনিউ"
+    url: "#"
+    parent: "প্রবাস"
+    weight: 3
+  - name: "পাসপোর্ট হারিয়ে গেলে"
+    url: "#"
+    parent: "প্রবাস"
+    weight: 3
+  - name: "ভিসা"
+    url: "#"
+    parent: "প্রবাস"
+    weight: 3
+  - name: "BMET"
+    url: "#"
+    parent: "প্রবাস"
+    weight: 3
+  - name: "PDO আবেদন"
+    url: "#"
+    parent: "প্রবাস"
+    weight: 3
+  - name: "PDO সার্টিফিকেট"
+    url: "#"
+    parent: "প্রবাস"
+    weight: 3
+# আইটি
+  - name: "আইটি"
+    url: "#"
+  - name: "উইন্ডোজ সেটআপ"
+    url: "#"
+    parent: "আইটি"
+  - name: "ডাটা রিকোভারি"
+    url: "#"
+    parent: "আইটি"
+  - name: "লিনাক্স সেটআপ"
+    url: "#"
+    parent: "আইটি"
+  - name: "ফোন আনলক/এফআরপি বাইপাস"
+    url: "#"
+    parent: "আইটি"
+  - name: "প্রশিক্ষণ/শিক্ষণ"
+    url: "#"
+  - name: "এমএস ওয়ার্ড"
+    url: "#"
+    parent: "প্রশিক্ষণ/শিক্ষণ"
+  - name: "এম এস অফিস"
+    url: "#"
+    parent: "প্রশিক্ষণ/শিক্ষণ"
+  - name: "ওপেন সোর্স"
+    url: "#"
+    parent: "প্রশিক্ষণ/শিক্ষণ"
+  - name: "এডোবি ফটোশপ"
+    url: "#"
+    parent: "প্রশিক্ষণ/শিক্ষণ"
+  - name: "এডোবি ইলাস্ট্রেটর + ইঙ্কস্কেপ"
+    url: "#"
+    parent: "প্রশিক্ষণ/শিক্ষণ"
+  
+
+  - name: "অন্যান্য"
+    url: "#"
+  - name: "টিন/ট্যাক্স রিটার্ন"
+    url: "#"
+    parent: "অন্যান্য"
+  - name: "ড্রাইভিং লাইসেন্স"
+    url: "#"
+    parent: "অন্যান্য"
+  - name: "জিডি/পুলিশ ক্লিয়ারেন্স"
+    url: "#"
+    parent: "অন্যান্য"
+  - name: "জমির পর্চা/খতিয়ান/খাজনা/নামজারি/কর"
+    url: "#"
+    parent: "অন্যান্য"
+ 
+  - name: "চাকরির আবেদন"
+    url: "#"
+    parent: "অন্যান্য"
+  - name: "ডাউনলোড"
+    url: "#"
+  - name: "ওয়ার্ড/ডক্স"
+    url: "#"
+    parent: "ডাউনলোড"
+  - name: "শীট/এক্সেল"
+    url: "#"
+    parent: "ডাউনলোড"
+  - name: "এআই"
+    url: "#"
+    parent: "ডাউনলোড"
+  - name: "ফটোশপ"
+    url: "#"
+    parent: "ডাউনলোড"
+  - name: "ইঙ্কস্কেপ"
+    url: "#"
+    parent: "ডাউনলোড"
+
+global: 
+  - name: "বাংলা লার্নিং মডিউল"
+    url: "/learn-bengali/"
+    params:
+      label: অবাংলাভাষীদের জন্য বাংলা শিক্ষণ সামগ্রী
+  - name: "পরিষদ বাংলা অভিধান"
+    url: "/parisad-bengali-dictionary/"
+    params:
+      label: বাংলা ভাষার সর্বাধুনিক, সর্ববৃহৎ ও সমৃদ্ধ বাংলা অভিধান
+  - name: "পরিষদ লোকজ শব্দকোষ"
+    url: #
+    params:
+      label: ময়মনসিংহে অঞ্চলের আঞ্চলিক ভাষা অভিধান
+  - name: "পরিষদ সমার্থক শব্দকোষ"
+    url: #
+    params:
+      label: ময়মনসিংহে অঞ্চলের আঞ্চলিক ভাষা অভিধান
+  - name: "বাংলা প্রবাদ সংগ্রহ"
+    url: #
+    params:
+      label: ময়মনসিংহে অঞ্চলের আঞ্চলিক ভাষা অভিধান
+  - name: "বাঙালির যা যা"
+    url: #
+    params:
+      label: বাঙালির ভাষা, প্রযুক্তি, সংস্কৃতি সমস্ত কিছু নিয়ে গ্রন্থ
+  - name: "Discrete Mathematics in Bengali"
+    url: "/discrete-mathematics/"
+    params:
+      label: বাঙালির ভাষা, প্রযুক্তি, সংস্কৃতি সমস্ত কিছু নিয়ে গ্রন্থ
+globallinks:
+  - name: "ঐশিক আইটি সেন্টার"
+    url: "https://itc.aishikrehman.com/"
+    params:
+      label: লক্ষীগঞ্জ বাজার, ঈশ্বরগঞ্জ, ময়মনসিংহ
+  - name: "ঐশিক লার্নিং সেন্টার"
+    url: "https://learn.aishikrehman.com/"
+    params:
+      label: লক্ষীগঞ্জ বাজার, ঈশ্বরগঞ্জ, ময়মনসিংহ
+  - name: "বাংলা পরিষদ"
+    url: "https://bengalicouncil.github.io/"

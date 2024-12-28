@@ -1,8 +1,0 @@
-<div class="braedcrumb">
-    <ul class="list-inline d-flex" id="breadcrumbs">
-        {{- range .Ancestors.Reverse }}
-        <li><a class="text-white" href="{{ .RelPermalink }}">{{ .Title }} ▶</a></li>
-        {{- end }}
-        <li><a class="text-white" href="{{ .RelPermalink }}"> {{ .Title }}</a></li>
-    </ul>
-</div>
