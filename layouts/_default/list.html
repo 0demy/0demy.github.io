@@ -1,27 +1,19 @@
 {{ define "main" }}
-<div class="container py-4">
-  {{ range $index, $section := .Pages }}
-  {{ if eq $index 0}}
-  <div class="p-5 mb-4 text-bg-dark rounded-3">
-    <div class="container-fluid py-5">
-      {{ partial "my-inline-partial.html" . }}
-    </div>
+<div class="p-5 mb-4 text-bg-dark">
+  <div class="py-2 container">
+    <h2>{{.Title}}</h2>
   </div>
-  <div class="row g-4">
-    {{ else }}
-    <div class="col-md-6">
-      <div class="h-100 bg-body-tertiary p-5 rounded-3 border">
-        {{ partial "my-inline-partial.html" . }}
-      </div>
-    </div>
-    {{ end }}
+</div>
+<div class="container py-4">
+  {{ .Content }}
+  <div class="list-group">
+    {{ range $index, $section := .Pages }}
+    <a href="{{.Permalink}}" class="list-group-item list-group-item-action gap-3 py-3">
+      <h4>{{.Title}}</h4>
+      {{/* <p>{{.Summary | truncate 200}}</p> */}}
+      {{/* <a class="btn btn-outline-secondary" type="button" href="{{.Permalink}}">{{i18n "readNow" }}</a> */}}
+    </a>
     {{ end }}
   </div>
 </div>
-{{ end }}
-
-{{ define "partials/my-inline-partial.html" }}
-<h2>{{.Title}}</h2>
-<p>{{.Summary | truncate 200}}</p>
-<a class="btn btn-outline-secondary" type="button" href="{{.Permalink}}">{{i18n "readNow" }}</a>
 {{ end }}

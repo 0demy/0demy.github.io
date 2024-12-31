@@ -49,62 +49,83 @@ main:
 # এনআইডি
   - name: "এনআইডি/ভোটার"
     url: "/nid/new-voter/"
-    identifier: এনআইডি
+    identifier: NIDMENU
     weight: 2
+
   - name: "এনআইডি*"
     url: "/nid/"
-    parent: "এনআইডি"
+    weight: 1
+    parent: "NIDMENU"
+
   - name: "নতুন ভোটার আবেদন"
-    url: "/nid/new-voter/"
-    parent: "এনআইডি"
-  - name: "ভোটার স্থানান্তর আবেদন"
+    url: "/nid/apply/"
+    parent: "NIDMENU"
+    weight: 2
+
+  - name: "ভোটার স্লিপ প্রিন্ট"
+    url: "/nid/voter-slip-print/"
+    parent: "NIDMENU"
+
+  - name: "ভোটার স্থানান্তরের আবেদন"
     url: "/nid/voter-transfer/"
-    parent: "এনআইডি"
-  - name: "ভোটার স্লিপ"
-    url: "/nid/"
-    parent: "এনআইডি"
-  - name: "স্থায়ী ঠিকানা সংশোধন আবেদন"
-    url: "/nid/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
   - name: "মৃত ভোটার সক্রিয় আবেদন"
     url: "/nid/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
   - name: "ভোটার তালিকা"
     url: "/nid/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
   - name: "NID ছবি ও স্বাক্ষর পরিবর্তন"
+    url: "/nid/change-nids-photo-and-signature/"
+    parent: "NIDMENU"
+    
+  - name: "স্থায়ী ঠিকানা সংশোধন আবেদন"
     url: "/nid/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
+    parent: "NIDMENU"
   - name: "দ্বৈত ভোটার কর্তন"
     url: "/nid/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
   - name: "AFIS ম্যাচিং আবেদন"
     url: "/nid/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
   - name: "NID সংশোধন আবেদন বাতিল"
     url: "/nid/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
   - name: "রিইস্যু"
     url: "/nid/reissue/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
   - name: "উত্তোলন"
     url: "/nid/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+    
   - name: "ভোটার নং"
     url: "/nid/voter-no/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
   - name: "ভোটার স্থানান্তর আবেদনের স্ট্যাটাস যাচাই"
     url: "/nid/voter-transfer-status/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
   - name: "পুরাতন NID Number/PIN সংগ্রহ"
     url: "/nid/old-nid-number"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
   - name: "স্মার্ট NID Number সংগ্রহ"
     url: "/nid/smart-nid-number/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
+
   - name: "FAQ"
     url: "/nid/faq/"
-    parent: "এনআইডি"
+    parent: "NIDMENU"
 # প্রবাস
   - name: "প্রবাস/পাসপোর্ট"
     url: "/nid/faq/"
@@ -119,15 +140,15 @@ main:
     parent: "প্রবাস"
     weight: 3
   - name: "পাসপোর্ট বয়স সংশোধন"
-    url: "#"
+    url: "/passport/passport-age-correction/"
     parent: "প্রবাস"
     weight: 3
   - name: "পাসপোর্ট রিনিউ"
-    url: "#"
+    url: "/passport/e-passport-renew"
     parent: "প্রবাস"
     weight: 3
   - name: "পাসপোর্ট হারিয়ে গেলে"
-    url: "#"
+    url: "/passport/lost-or-stolen/"
     parent: "প্রবাস"
     weight: 3
   - name: "ভিসা"
@@ -135,11 +156,11 @@ main:
     parent: "প্রবাস"
     weight: 3
   - name: "BMET"
-    url: "#"
+    url: "/probash/bmet/"
     parent: "প্রবাস"
     weight: 3
   - name: "PDO আবেদন"
-    url: "#"
+    url: "/probash/pdo/"
     parent: "প্রবাস"
     weight: 3
   - name: "PDO সার্টিফিকেট"
@@ -150,13 +171,13 @@ main:
   - name: "আইটি"
     url: "#"
   - name: "উইন্ডোজ সেটআপ"
-    url: "#"
+    url: "/it/windows/"
     parent: "আইটি"
   - name: "ডাটা রিকোভারি"
     url: "#"
     parent: "আইটি"
   - name: "লিনাক্স সেটআপ"
-    url: "#"
+    url: "/it/linux/"
     parent: "আইটি"
   - name: "ফোন আনলক/এফআরপি বাইপাস"
     url: "#"

@@ -6,8 +6,6 @@ defaultLang: bn # Should match DefaultContentLanguage; used for checks (not nece
 
 # Site
 subtitle: অভিধানকার | বিসিএসই # Subtitle of the site; 
-subdomain: "" # Subdomain for the site; leave empty if not applicable
-livepath: "/" # Path for the site; leave empty if not applicable
 
 # Accesibilty and Features
 defaultColorMode: "light" # Changing this requires some changes to the colormode.js script; otherwise, it won't work
@@ -15,6 +13,7 @@ activateColorModeToogler: true # Activates the dark/light color mode toggler
 activateGlobalMenu: true # Activates the Global Menu if required
 siteWideDynamicTitle: false
 useSubNavBar: true
+adminLogin: true
 
 # Packeges/Dependencies 
 usejQuery: false # Enables jQuery if needed

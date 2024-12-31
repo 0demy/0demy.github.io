@@ -1,5 +1,5 @@
 {{ define "main" }}
-<div class="container py-4">
+<div class="container py-4" print-area="home">
   {{ range $index, $section := .Site.Sections }}
   {{ if eq $index 0}}
   <div class="p-5 mb-4 text-bg-dark rounded-3">

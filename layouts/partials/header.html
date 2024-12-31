@@ -18,11 +18,18 @@
                 {{ end }}
             </a>
             {{- end -}}
+            
             <div class="d-flex row-center" id="accessibilityMenu">
+                {{- if .Site.Params.adminLogin -}}
+                <div class="border-right pe-2">
+                    <a class="fw-bold" id="userName" href="{{$homepage_url}}login/?{{.Permalink}}">Login</a>
+                    <i type="button" id="logoutBtn" class="bi bi-box-arrow-in-right" style="display: none; margin-left: 10px;"></i>
+                </div>
+                {{ end }}
                 {{/* Global Menu Toogle Button */}}
                 {{- with .Site.Params.activateGlobalMenu -}}
                 <div class="border-right" id="globalMenu">
-                    <button type="button" class="btn nav-link pe-2" data-bs-toggle="collapse"
+                    <button type="button" class="btn nav-link px-2" data-bs-toggle="collapse"
                         data-bs-target="#GlobalMenu" aria-expanded="false" aria-controls="GlobalMenu">
                         <i class="bi bi-menu-up me-1"></i>
                         {{/* <span class="d-none d-lg-inline-block fw-bold">{{i18n "termMenu"}}</span> */}}

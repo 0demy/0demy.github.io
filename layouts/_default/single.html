@@ -7,7 +7,7 @@
     </div>
     <div id="articleSidebar" class="col-lg-4">
       <div class="position-sticky" style="top: 2rem;">
-        {{ partial "widget/tocNormal.html" . }}
+        
         {{ partial "widget/sameSectionPosts.html" . }}
       </div>
     </div>
@@ -22,7 +22,8 @@
 {{ define "partials/articleContent.html" }}
 <div id="articleSchema">
   <h2 id="articleTitle" class="border-bottom pb-2 fw-bold" itemprop="headline">{{ .Title }}</h2>
-  <div id="articleNavigation" class="my-3">{{ partial "local/navigation.html" . }}</div>
+  {{ partial "widget/tocNormal.html" . }}
+  {{/*  <div id="articleNavigation" class="my-3">{{ partial "local/navigation.html" . }}</div>  */}}
   <hr>
 </div>
 <div id="articleBody" class="mt-4" itemprop="articleBody">{{.Content}}</div>
