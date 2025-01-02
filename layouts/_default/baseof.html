@@ -34,8 +34,11 @@
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     {{ end -}}
 
+    {{- with .Site.Params.usePrintPageFunction -}}
+    <script type="text/javascript" src="{{ $siteURL }}global/js/print.js"></script>
+    {{ end -}}
+
     {{ block "script" . }}{{ end }}
     {{ partial "function/logout.html" . }}
-    {{ partial "function/print.html" . }}
 </body>
 </html>

@@ -14,6 +14,7 @@ activateGlobalMenu: true # Activates the Global Menu if required
 siteWideDynamicTitle: false
 useSubNavBar: true
 adminLogin: true
+usePrintPageFunction: true
 
 # Packeges/Dependencies 
 usejQuery: false # Enables jQuery if needed
