@@ -7,7 +7,7 @@
     </div>
     <div id="articleSidebar" class="col-lg-4">
       <div class="position-sticky" style="top: 2rem;">
-        
+
         {{ partial "widget/sameSectionPosts.html" . }}
       </div>
     </div>
@@ -20,10 +20,28 @@
 {{ end }}
 
 {{ define "partials/articleContent.html" }}
+<div class="container my-4" id="ListPageContent">
+  {{ .Content }}
+  <h2 class="text-center py-3">..বিস্তারিত তথ্য..</h2>
+  <div id="Index">
+    {{ range $index, $section := .Pages }}
+    <a class="nav-link d-flex border rounded shadow-lg p-3 my-2" href="{{.Permalink}}">
+      <span class="text-bg-dark fs-3 p-1 px-3">{{ printf "%02d" (add $index 1) }}</span>
+      <h3 class="p-1 ps-3">{{.Title}}</h3>
+      {{/* <p class="pt-2">{{.Summary | truncate 200}}</p> */}}
+    </a>
+    {{ end }}
+  </div>
+</div>
 <div id="articleSchema">
-  <h2 id="articleTitle" class="border-bottom pb-2 fw-bold" itemprop="headline">{{ .Title }}</h2>
+  <h1 id="articleTitle" class="border-bottom pb-2 fw-bold" itemprop="headline">{{ .Title }}</h1>
+  <p class="fw-bold">
+    {{ range $index, $title := .Params.alts }}
+    {{with $index }} • {{ end }}{{ . }}
+    {{ end }}
+  </p>
   {{ partial "widget/tocNormal.html" . }}
-  {{/*  <div id="articleNavigation" class="my-3">{{ partial "local/navigation.html" . }}</div>  */}}
+  {{/* <div id="articleNavigation" class="my-3">{{ partial "local/navigation.html" . }}</div> */}}
   <hr>
 </div>
 <div id="articleBody" class="mt-4" itemprop="articleBody">{{.Content}}</div>

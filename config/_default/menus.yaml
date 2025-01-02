@@ -46,6 +46,9 @@ main:
   - name: "নতুন ফরম্যাটে কনভার্ট"
     url: "/dr/convert/"
     parent: "জন্ম"
+  - name: "কাবিন নামা/তালাকনামা/নিকাহনামা"
+    url: "/dr/convert/"
+    parent: "জন্ম"
 # এনআইডি
   - name: "এনআইডি/ভোটার"
     url: "/nid/new-voter/"
