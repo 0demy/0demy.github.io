@@ -5,8 +5,8 @@
   </div>
 </div>
 <div class="container my-4" id="ListPageContent">
-  {{ .Content }}
-  <h2 class="text-center py-3">..বিস্তারিত তথ্য..</h2>
+  {{/*  {{ .Content }}  */}}
+  {{/*  <h2 class="text-center py-3">..বিস্তারিত তথ্য..</h2>  */}}
   <div id="Index">
     {{ range $index, $section := .Pages }}
     <a class="nav-link d-flex border rounded shadow-lg p-3 my-2" href="{{.Permalink}}">
