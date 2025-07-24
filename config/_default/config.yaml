@@ -6,8 +6,15 @@ timeZone: "Asia/Dhaka"
 # contentDir: "content/discrete-mathematics/"
 paginate: 5
 
+permalinks:
+  page:
+    hsc-bangla-1st-paper: /:slug/
+  section:
+    hsc-bansgla-1st-paper: /:slug/
 
-title: ঐশিক আইটি সেন্টার
+
+
+title: জিরোডেমি
 
 markup:
   goldmark:
